@@ -8,7 +8,7 @@
 
 ## Langkah - langkah praktikum.
 
-- Unduh terlebih dahulu `xampp` setelah selesai unduh install pada perangkat anda, untuk memngunduhnya dari `[link](https://www.apachefriends.org/download.html)`
+- Unduh terlebih dahulu `xampp` setelah selesai unduh install pada perangkat anda, untuk memngunduhnya silakan klik `[Unduh XAMPP](https://www.apachefriends.org/download.html)`
 
 - Setelah selesai di install silakan buka `xampp` untuk menjalankan `web server` lalu klik `start` pada bagian `Module` `Apache` untuk memulainya
   ![Imgur-1](https://i.imgur.com/BUtdZlo.png)
