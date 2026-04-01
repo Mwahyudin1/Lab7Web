@@ -60,25 +60,33 @@ Contoh kode yang mengarahkan rute ke halaman home. ``` $routes->get('/', 'Home::
 
 Tambahkan kode berikut unutk membuat route baru di file **Routes.php**
 
+``` $routes->get('/', 'Home::index'); ```
+
+``` $routes->get('/home', 'page::home'); ```
+
+``` $routes->get('/artikel', 'page::artikel'); ```
+
 ``` $routes->get('/about', 'page::about'); ```
 
 ``` $routes->get('/contact', 'page::contact'); ```
 
 ``` $routes->get('/faqs', 'page::faqs'); ```
 
-<img width="909" height="309" alt="image" src="https://github.com/user-attachments/assets/0d36f2f5-e83d-48cf-ac27-154884dde96f" />
+``` $routes->get('/tos', 'page::tos'); ```
+
+<img width="542" height="395" alt="image" src="https://github.com/user-attachments/assets/3a2c637d-3b5b-49fa-810c-f3d91814d880" />
 
 Buka CLI dan jalankan perintah **php spark routes** untuk melihat route yang ditambahkan sudah benar atau tidak.
 
-<img width="1107" height="636" alt="image" src="https://github.com/user-attachments/assets/bafb2e06-8753-4e95-b5f1-b1443af7159b" />
+<img width="1107" height="633" alt="image" src="https://github.com/user-attachments/assets/b25d9a8b-0b9b-49fd-b9ac-48717330bc74" />
 
 Setelah membuat route baru selanjutnya membuat controller page. Untuk membuat controller page, buat file baru dengan nama file **page.php** pada direktory **Controllers**.
 
-<img width="886" height="732" alt="image" src="https://github.com/user-attachments/assets/422dd68f-4232-49b4-a463-23d3b772db00" />
+<img width="888" height="916" alt="image" src="https://github.com/user-attachments/assets/ffc2a607-ef58-4479-aeae-867319bb56e4" />
 
-Selanjutnya membuat view. Buat file baru dengan nama **about.php** pada direktory view **app/view/about.php** yang dimana nanti akan memanggil file **header.php** dan **footer.php** yang berada di direktory **app/view/template/**.
+Selanjutnya buat file baru dengan nama **home.php**, **artikel.php**, **about.php**, **contact.php** pada direktory view **app/view/** yang dimana nanti akan memanggil file **header.php** dan **footer.php** yang berada di direktory **app/view/template/**.
 
-<img width="515" height="218" alt="image" src="https://github.com/user-attachments/assets/56aa74b4-d5a5-4ca8-b999-d534e5b6d9af" />
+<img width="1547" height="826" alt="image" src="https://github.com/user-attachments/assets/17a20d35-8144-45ea-a12f-4bdc9a480c20" />
 
 Lalu buat folder baru dengan nama **template** di direktory **app/view/** yang mana didalam folder ada file **header.php** dan **footer.php**.
 
@@ -94,7 +102,20 @@ Selanjutnya buat file **style.css** pada direktory **app/public/**.
 
 Kemudian buka browser unutk menjalankannya.
 
+Tampilan halaman ``` Home ```.
+
+<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/edafbd08-9b1e-434e-a8e2-892a11f2e9e3" />
+
+Tampilan halaman ``` Artikel ```.
+
+<img width="1920" height="1029" alt="image" src="https://github.com/user-attachments/assets/8dd40831-7b78-47c1-87c1-3481466e97aa" />
+
+Tampilan halaman ``` About ```.
+
 <img width="1920" height="1031" alt="image" src="https://github.com/user-attachments/assets/e9d95cf2-f042-4989-a054-61bab194ce30" />
 
+Tampilan halaman ``` Contact ```
+
+<img width="1920" height="1028" alt="image" src="https://github.com/user-attachments/assets/0f041651-8df2-4f95-9c11-4a48685036ab" />
 
 
