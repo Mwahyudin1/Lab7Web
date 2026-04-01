@@ -1,5 +1,5 @@
-# Praktikum 1: PHP Framework (Codeigniter)
-
+# Praktikum Pemrograman Web 2
+---
 ### Mata Kuliah: Pemrograman Web 2
 ### Nama: Mochamad Wahyudin Ardiansyah
 ### Nim: 312210148
@@ -8,10 +8,41 @@
 ---
 ## Langkah - Langkah Praktikum
 
-### 1. Konfigurasi dan Installasi Codeigniter
-Unduh Codeigniter melalui website https://codeigniter.com/download.
+### 1. Membuat Database dan Tabel
+Langkah pertama adalah membuat database dengan nama ``` lab_ci4 ``` dan tabel ``` artikel ``` melalui **phpMyAdmin**.
 
-Lalu lakukan konfigurasi terlebih dahulu untuk mengaktifkan ekstensi PHP guna kebutuhan pengembangan Codeigniter 4.
+<img width="448" height="305" alt="image" src="https://github.com/user-attachments/assets/52e9e8e9-4eea-4d13-85f7-ad626a19dfb2" />
+
+### 2. Konfigurasi Database
+Selanjutnya melakukan konfigurasi database untuk menghubungkan ke database server. Konfigurasi dilakukan pada file ``` .env ```, konfigurasi juga bisa dilakukan pada file ``` app/config/database.php ```.
+
+<img width="531" height="185" alt="image" src="https://github.com/user-attachments/assets/bf2b74ab-0dd4-4c5e-bf34-b2a9d2d6ad11" />
+
+### 3. Membuat Model
+Selanjutnya membuat model unutk memproses data artikel. Buat file baru dengan nama ``` ArtikelModel.php ``` pada direktory ``` app/Models ```.
+
+<img width="834" height="346" alt="image" src="https://github.com/user-attachments/assets/826cc0ac-fc75-4f7c-ac22-6dafc3487ebe" />
+
+### 4. Membuat Controller
+Selanjutnya buat Controller baru dengan nama ``` Artikel.php ``` pada direktory ``` app/Controllers ```.
+
+<img width="787" height="420" alt="image" src="https://github.com/user-attachments/assets/e68cb20d-b13a-43fd-9682-e461aed16875" />
+
+### 5. Membuat View
+Selnajutnya buat direktory baru dengan nama ``` artikel ``` pada direktory ``` app/view ```, lalu buat file baru dengan nama ``` index.php ```.
+
+ss artikel
+
+Kemudian menambahkan beberapa data pada database.
+
+<img width="1539" height="235" alt="image" src="https://github.com/user-attachments/assets/d00fb4f2-bec1-4e8a-90ca-b34c38907d0d" />
+
+
+
+
+
+---
+
 
 Buka XAMPP, pada bagian Apache klik Config > PHP (php.ini)
 
