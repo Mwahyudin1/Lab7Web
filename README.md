@@ -29,17 +29,24 @@ Selanjutnya buat Controller baru dengan nama ``` Artikel.php ``` pada direktory 
 <img width="787" height="420" alt="image" src="https://github.com/user-attachments/assets/e68cb20d-b13a-43fd-9682-e461aed16875" />
 
 ### 5. Membuat View
-Selnajutnya buat direktory baru dengan nama ``` artikel ``` pada direktory ``` app/view ```, lalu buat file baru dengan nama ``` index.php ```.
+Selanjutnya buat direktory baru dengan nama ``` artikel ``` pada direktory ``` app/view ```, lalu buat file baru dengan nama ``` index.php ```.
 
-ss artikel
+<img width="1029" height="429" alt="image" src="https://github.com/user-attachments/assets/a407d469-1053-47ec-a4e6-ca82c837f633" />
+
 
 Kemudian menambahkan beberapa data pada database.
 
 <img width="1539" height="235" alt="image" src="https://github.com/user-attachments/assets/d00fb4f2-bec1-4e8a-90ca-b34c38907d0d" />
 
+Lalu ubah jalur route pada ``` routes.php ``` menjadi ``` $routes->get('/artikel', 'Artikel::index'); ```.
 
+<img width="1054" height="385" alt="image" src="https://github.com/user-attachments/assets/f5369118-1a40-4f09-8aea-e43bc41649f4" />
 
+Kemudian buka browser dan lihat hasilnya.
 
+<img width="1920" height="984" alt="image" src="https://github.com/user-attachments/assets/785c8f27-4b7a-4913-84a4-fe443ddbf258" />
+
+### 6. Membuat Tampilan Detail Artikel
 
 ---
 
