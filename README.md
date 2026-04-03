@@ -33,7 +33,6 @@ Selanjutnya buat direktory baru dengan nama ``` artikel ``` pada direktory ``` a
 
 <img width="1029" height="429" alt="image" src="https://github.com/user-attachments/assets/a407d469-1053-47ec-a4e6-ca82c837f633" />
 
-
 Kemudian menambahkan beberapa data pada database.
 
 <img width="1539" height="235" alt="image" src="https://github.com/user-attachments/assets/d00fb4f2-bec1-4e8a-90ca-b34c38907d0d" />
@@ -47,6 +46,33 @@ Kemudian buka browser dan lihat hasilnya.
 <img width="1920" height="984" alt="image" src="https://github.com/user-attachments/assets/785c8f27-4b7a-4913-84a4-fe443ddbf258" />
 
 ### 6. Membuat Tampilan Detail Artikel
+Selanjutnya, agar saat judul artikel di klik maka akan diarahkan ke halaman yang berbeda. Untuk membuatnya tambahkan fungsi baru pada file ``` Controller/Artikel.php ```.
+
+<img width="797" height="618" alt="image" src="https://github.com/user-attachments/assets/c3ff9107-4ca7-40f3-be37-ff355ef86293" />
+
+Kemudian buat view baru di direktory ``` app/View/artikel ``` dengan nama file ``` detail.php ```.
+
+<img width="1051" height="253" alt="image" src="https://github.com/user-attachments/assets/db936ffc-d27d-46f3-9c2d-b0cb509f46c1" />
+
+Kemudian tambahkan routing baru di direktory ``` app/Config/Routes.php ```
+
+<img width="1044" height="393" alt="image" src="https://github.com/user-attachments/assets/22af6fa7-31a9-4393-9e1d-0100c3982253" />
+
+Lalu klik pada judul artikel maka akan di arahkan he halaman yang berbeda.
+
+<img width="1920" height="973" alt="image" src="https://github.com/user-attachments/assets/987b2218-bb01-4646-92f5-917ca39fd8d0" />
+
+### 7. Membuat Menu Admin
+Selanjutnya membuat menu admin untuk melakukan proses ``` CRUD ``` pada artikel. Buat fungsi baru pada file ``` Artikel.php ```
+
+<img width="818" height="692" alt="image" src="https://github.com/user-attachments/assets/c48a8ea7-4d4a-4b6d-989d-430be85e972e" />
+
+Kemudian buat view baru untuk menampilkan tampilan admin dengan nama file ``` admin_index.php ``` pada direktory ``` app/View/artikel ```
+
+ss admin_index.php
+
+Kemudian tambahkan routing baru pada file ``` routes.php ``` untuk menu admin.
+
 
 ---
 
