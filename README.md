@@ -19,7 +19,7 @@ Selanjutnya melakukan konfigurasi database untuk menghubungkan ke database serve
 <img width="531" height="185" alt="image" src="https://github.com/user-attachments/assets/bf2b74ab-0dd4-4c5e-bf34-b2a9d2d6ad11" />
 
 ### 3. Membuat Model
-Selanjutnya membuat model unutk memproses data artikel. Buat file baru dengan nama ``` ArtikelModel.php ``` pada direktory ``` app/Models ```.
+Selanjutnya membuat model untuk memproses data artikel. Buat file baru dengan nama ``` ArtikelModel.php ``` pada direktory ``` app/Models ```.
 
 <img width="834" height="346" alt="image" src="https://github.com/user-attachments/assets/826cc0ac-fc75-4f7c-ac22-6dafc3487ebe" />
 
@@ -69,117 +69,64 @@ Selanjutnya membuat menu admin untuk melakukan proses ``` CRUD ``` pada artikel.
 
 Kemudian buat view baru untuk menampilkan tampilan admin dengan nama file ``` admin_index.php ``` pada direktory ``` app/View/artikel ```
 
-ss admin_index.php
+<img width="1543" height="720" alt="image" src="https://github.com/user-attachments/assets/72d17753-0680-42ed-935d-d5629f29d793" />
+
+<img width="1545" height="270" alt="image" src="https://github.com/user-attachments/assets/f9762a1b-1dea-4f22-8dcd-9bc6e5333851" />
+
+Kemudian buat file ``` admin_header.php ``` pada direktory ``` app/View/template/ ```.
+
+<img width="957" height="522" alt="image" src="https://github.com/user-attachments/assets/40f65404-25d1-4db9-974f-988b11f5cb71" />
+
+Kemudian buat file ``` admin_footer.php ``` pada direktory ``` app/View/template/ ```.
+
+<img width="1142" height="440" alt="image" src="https://github.com/user-attachments/assets/1fb337a0-9963-4e58-aae8-9e55dcc5ae01" />
 
 Kemudian tambahkan routing baru pada file ``` routes.php ``` untuk menu admin.
 
+<img width="1066" height="583" alt="image" src="https://github.com/user-attachments/assets/f3563ddf-17d6-4d54-8074-ca965b48bcec" />
+
+Kemudian buka browser untuk melihat hasilnya.
+
+<img width="1920" height="977" alt="image" src="https://github.com/user-attachments/assets/a0fef4e8-260b-467a-ab71-38348dd4fcfd" />
+
+### 8. Menambah Data Artikel
+Selanjutnya menambahkan fungsi baru pada direktory ``` app/Controllers/Artikel.php ``` untuk menambahkan artikel baru.
+
+<img width="810" height="755" alt="image" src="https://github.com/user-attachments/assets/ec9ac2f4-fce0-4c83-aa63-9e95e3527721" />
+
+Kemudian buat view baru untuk form tambah artikel dengan nama file ``` from_add.php ```.
+
+<img width="766" height="286" alt="image" src="https://github.com/user-attachments/assets/fb54cb8b-f870-4b76-8cbb-f829923b1bfe" />
+
+Kemudian buka browser untuk melihat hasilnya.
+
+<img width="1920" height="974" alt="image" src="https://github.com/user-attachments/assets/f510bb8d-298f-4c3d-a3ad-49ffc394b13f" />
+
+### 9. Mengubah Data
+Selanjutnya menambahkan fungsi baru pada direktory ``` app/Controllers/Artikel ``` dengan nama ``` edit() ```.
+
+<img width="777" height="580" alt="image" src="https://github.com/user-attachments/assets/9fa8963f-58bc-4a56-ba75-718b43cf8664" />
+
+Kemudian buat view baru untuk form edit artikel dengan nama file ``` from_edit.php ```
+
+<img width="888" height="250" alt="image" src="https://github.com/user-attachments/assets/19bb1188-332d-4e40-b655-f882bbd90e65" />
+
+Kemudian buka browser untuk melihat hasilnya.
+
+<img width="1920" height="977" alt="image" src="https://github.com/user-attachments/assets/89a8aa57-3dc1-4926-914f-713e68b8e8fb" />
+
+### 10. Menghapus Data
+Selanjutnya menambahkan fungsi baru untuk menghapus data pada direktory ``` app/Controllers/Artikel.php ``` dengan nama fungsi ``` delet() ```.
+
+<img width="513" height="256" alt="image" src="https://github.com/user-attachments/assets/db2dcaf7-6994-46b5-a93d-91a4ee465073" />
+
+Kemudian buka browser untuk melakukan hapus artikel.
+- Before
+
+<img width="1920" height="982" alt="image" src="https://github.com/user-attachments/assets/62621d74-982a-4527-95d6-69863b9994d4" />
+
+- After
+
+<img width="1920" height="972" alt="image" src="https://github.com/user-attachments/assets/7986e345-1c32-4e62-ad6f-77d552fed4a1" />
 
 ---
-
-
-Buka XAMPP, pada bagian Apache klik Config > PHP (php.ini)
-
-<img width="940" height="551" alt="image" src="https://github.com/user-attachments/assets/ab7e7c87-37b5-47df-97fd-a0b5db252939" />
-
-Lalu cari bagian extention, hilangkan tanda titik koma (;) untuk mengaktifkan ekstensi Codeigniter. Setelah titik koma dihapus simpan file dan kembali.
-
-<img width="877" height="736" alt="image" src="https://github.com/user-attachments/assets/fe63735d-d5db-4f70-945e-e4126d412e37" />
-
-Kemudian exstrak file zip Codeigniter yang telah di unduh ke dalam direktory **htdock/lab11_ci** dan ubah nama direktory **framework-4.x.xx** menjadi **c4**.
-
-Kemudian buka browser untuk melihat apakah Codeigniter sudah berjalan melalui alamt http://localhost/lab11_ci/ci4/public/
-
-<img width="1028" height="694" alt="image" src="https://github.com/user-attachments/assets/570b0e55-fa1b-43ef-9aca-22cc7972f709" />
-
-### 2. Menjalankan CLI (Command Line Interface)
-Buka shell pada XAMPP Control Panel, arahkan ke lokasi direktory kerja yang sudah dibuat sebelumnya **xampp/htdocs/lab11_ci/ci4**.
-
-<img width="1864" height="535" alt="image" src="https://github.com/user-attachments/assets/e0b1064f-3f9b-4dc5-bd9f-11f795b58b98" />
-
-Lakukan pemanggilan CLI dengan perintah ``` php spark ```.
-
-<img width="1036" height="538" alt="image" src="https://github.com/user-attachments/assets/88e528dc-4fd9-4ff3-b095-f65897b78c3c" />
-
-### 3. Mengaktifkan Mode Debuging
-Cari nama file **env** di direktory **ci4** lalu ubah namanya menjadi **.env** kemudian buka file tersebut dan ubah nilai variabel **CI_ENVIRONMENT** menjadi **CI_ENVIRONMENT = development**. Nilai variabel diubah guna mengaktifkan mode debuging pada Codeigniter.
-
-<img width="871" height="729" alt="image" src="https://github.com/user-attachments/assets/9671a9ac-799b-4092-8fb4-fd31a8e566cb" />
-
-Setelah nilai variabel diubah, sekarang mencoba mode debuging. Ubah kode pada file **app/Controllers/Home.php**, kemudian hilangkan tanda titik koma (;) pada kode guna melihat mode debuging.
-
-<img width="853" height="360" alt="image" src="https://github.com/user-attachments/assets/18b53397-a28d-485e-beda-fb3d82cbe46c" />
-
-Lalu buka browser untuk melihatnya.
-
-<img width="1028" height="696" alt="image" src="https://github.com/user-attachments/assets/81367aad-4efd-4572-9e2f-ecd912fb8423" />
-
-Pesan error menujukan dimana letak kesalahan pada kode programnya, mode debuging ini berguna untuk para pengembang atau developer unutk mengetahui dimana letak kesalahan pada kode programnya.
-
-### 4. Routing dan Controller
-Router terletak pada file **app/config/Routes.php**, pada file tersebut dapat mendefinisikan rote untuk aplikasi yang akan dibuat.
-
-Contoh kode yang mengarahkan rute ke halaman home. ``` $routes->get('/', 'Home::index'); ```.
-
-<img width="853" height="263" alt="image" src="https://github.com/user-attachments/assets/d94b2ff2-0039-4a67-9c90-33971fec5858" />
-
-Tambahkan kode berikut unutk membuat route baru di file **Routes.php**
-
-``` $routes->get('/', 'Home::index'); ```
-
-``` $routes->get('/home', 'page::home'); ```
-
-``` $routes->get('/artikel', 'page::artikel'); ```
-
-``` $routes->get('/about', 'page::about'); ```
-
-``` $routes->get('/contact', 'page::contact'); ```
-
-``` $routes->get('/faqs', 'page::faqs'); ```
-
-``` $routes->get('/tos', 'page::tos'); ```
-
-<img width="542" height="395" alt="image" src="https://github.com/user-attachments/assets/3a2c637d-3b5b-49fa-810c-f3d91814d880" />
-
-Buka CLI dan jalankan perintah **php spark routes** untuk melihat route yang ditambahkan sudah benar atau tidak.
-
-<img width="1107" height="633" alt="image" src="https://github.com/user-attachments/assets/b25d9a8b-0b9b-49fd-b9ac-48717330bc74" />
-
-Setelah membuat route baru selanjutnya membuat controller page. Untuk membuat controller page, buat file baru dengan nama file **page.php** pada direktory **Controllers**.
-
-<img width="888" height="916" alt="image" src="https://github.com/user-attachments/assets/ffc2a607-ef58-4479-aeae-867319bb56e4" />
-
-Selanjutnya buat file baru dengan nama **home.php**, **artikel.php**, **about.php**, **contact.php** pada direktory view **app/view/** yang dimana nanti akan memanggil file **header.php** dan **footer.php** yang berada di direktory **app/view/template/**.
-
-<img width="1547" height="826" alt="image" src="https://github.com/user-attachments/assets/17a20d35-8144-45ea-a12f-4bdc9a480c20" />
-
-Lalu buat folder baru dengan nama **template** di direktory **app/view/** yang mana didalam folder ada file **header.php** dan **footer.php**.
-
-Kemudian buat file **header.php** dan **footer.php**.
-
-<img width="820" height="552" alt="image" src="https://github.com/user-attachments/assets/2dbd6d6e-a956-4696-9162-d7d307c28bd0" />
-
-<img width="1417" height="563" alt="image" src="https://github.com/user-attachments/assets/f7ce3671-bc41-467f-b7dc-9cba2bb03aba" />
-
-Selanjutnya buat file **style.css** pada direktory **app/public/**.
-
-<img width="859" height="965" alt="image" src="https://github.com/user-attachments/assets/3ef4e216-7bbb-4e02-bf3e-9f49eaaaa6e7" />
-
-Kemudian buka browser unutk menjalankannya.
-
-Tampilan halaman ``` Home ```.
-
-<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/edafbd08-9b1e-434e-a8e2-892a11f2e9e3" />
-
-Tampilan halaman ``` Artikel ```.
-
-<img width="1920" height="1029" alt="image" src="https://github.com/user-attachments/assets/8dd40831-7b78-47c1-87c1-3481466e97aa" />
-
-Tampilan halaman ``` About ```.
-
-<img width="1920" height="1031" alt="image" src="https://github.com/user-attachments/assets/e9d95cf2-f042-4989-a054-61bab194ce30" />
-
-Tampilan halaman ``` Contact ```
-
-<img width="1920" height="1028" alt="image" src="https://github.com/user-attachments/assets/0f041651-8df2-4f95-9c11-4a48685036ab" />
-
-
