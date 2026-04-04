@@ -8,6 +8,9 @@
 ---
 ## Langkah - Langkah Praktikum
 
+*Praktikum 1 di update menjadi praktikum 2*.
+
+### PRAKTIKUM 2: CRUD
 ### 1. Membuat Database dan Tabel
 Langkah pertama adalah membuat database dengan nama ``` lab_ci4 ``` dan tabel ``` artikel ``` melalui **phpMyAdmin**.
 
@@ -130,3 +133,15 @@ Kemudian buka browser untuk melakukan hapus artikel.
 <img width="1920" height="972" alt="image" src="https://github.com/user-attachments/assets/7986e345-1c32-4e62-ad6f-77d552fed4a1" />
 
 ---
+
+### PRAKTIKU 3: VIEW LAYOUT & VIEW CELL
+### 1. Membuat Layout Utama
+Untuk membuat layout utama, buat folder baru dengan nama ``` layout ``` di dalam direktory ``` app/View ``` lalu buat file baru dengan nama ``` main.php ``` pada direktory ``` layout ```.
+
+<img width="1539" height="547" alt="image" src="https://github.com/user-attachments/assets/e077fc83-a948-47b9-b57f-0aef3441abf9" />
+
+<img width="1542" height="527" alt="image" src="https://github.com/user-attachments/assets/fbdc153b-c178-4a34-9f9a-e1e5a631dd39" />
+
+Kemudian update file view pada direktory ``` app/Views/home.php ```.
+
+<img width="460" height="253" alt="image" src="https://github.com/user-attachments/assets/8be8ba47-9acd-4ffc-b66c-6758795d9df2" />
