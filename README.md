@@ -135,13 +135,74 @@ Kemudian buka browser untuk melakukan hapus artikel.
 ---
 
 ### PRAKTIKU 3: VIEW LAYOUT & VIEW CELL
-### 1. Membuat Layout Utama
-Untuk membuat layout utama, buat folder baru dengan nama ``` layout ``` di dalam direktory ``` app/View ``` lalu buat file baru dengan nama ``` main.php ``` pada direktory ``` layout ```.
+### 1. Update Database
+Update database terlebih dahulu di ``` phpMyAdmin ``` pada database ``` lab_ci4 ```.
 
-<img width="1539" height="547" alt="image" src="https://github.com/user-attachments/assets/e077fc83-a948-47b9-b57f-0aef3441abf9" />
+<img width="636" height="148" alt="image" src="https://github.com/user-attachments/assets/ed02da60-b2f4-4916-9450-f561068e492d" />
 
-<img width="1542" height="527" alt="image" src="https://github.com/user-attachments/assets/fbdc153b-c178-4a34-9f9a-e1e5a631dd39" />
+Kemudian buat direktory ``` Models ``` pada direktory ``` app/ ``` lalu buat file baru dengan nama ``` ArtikelModel.php ``` di dalam direktory ``` app/Models/ ```.
 
-Kemudian update file view pada direktory ``` app/Views/home.php ```.
+<img width="814" height="338" alt="image" src="https://github.com/user-attachments/assets/09b8d07f-ba32-41c9-bed9-29b59d0e7b96" />
 
-<img width="460" height="253" alt="image" src="https://github.com/user-attachments/assets/8be8ba47-9acd-4ffc-b66c-6758795d9df2" />
+### 2. Buat Layout Utama
+Buat folder baru dengan nama ``` layout ``` pada direktory ``` app/Views/ ``` kemudian buat file baru dengan nama ``` main.php ``` pada direktory ``` app/Views/layout/ ```.
+
+<img width="1541" height="544" alt="image" src="https://github.com/user-attachments/assets/7fb1cdbd-8064-4f31-ac02-d1c4da3c4386" />
+
+<img width="1543" height="528" alt="image" src="https://github.com/user-attachments/assets/60c6cebe-dd7a-4d35-83fe-f10e724d194e" />
+
+### 3. Buat Sidebar (View Cell)
+Buat folder ``` Cells ``` pada direktory ``` app/ ``` kemudian buat file ``` ArtikelTerkini.php ``` pada direktory ``` app/Cells/ ```.
+
+<img width="875" height="334" alt="image" src="https://github.com/user-attachments/assets/614cd362-6c33-49bd-97b3-146f9bf491a9" />
+
+Kemudian buat folder baru ``` Components ``` pada direktory ``` app/Views ``` lalu buat file dengan nama ``` artikel_terkini.php ```.
+
+<img width="778" height="324" alt="image" src="https://github.com/user-attachments/assets/67011015-81c0-4b0f-807c-f1140f837b52" />
+
+### 4. Membuat Halaman Daftar Artikel
+Buat file baru pada direktory ``` app/Views/artikel ``` dengan nama file ``` index.php ```.
+
+<img width="995" height="556" alt="image" src="https://github.com/user-attachments/assets/fd560a62-9a52-4291-838a-4766b47ca69e" />
+
+Kemudian lakukan update pada file ``` home.php ```, ``` artikel.php ```, ``` about.php ```, dan ``` contact.php ```.
+
+<img width="462" height="282" alt="image" src="https://github.com/user-attachments/assets/ff1f863a-eb36-485c-a4f4-8ca365ec9f1f" />
+
+<img width="438" height="292" alt="image" src="https://github.com/user-attachments/assets/cb099f0d-26b6-41cc-b36d-67197748d6b3" />
+
+<img width="451" height="289" alt="image" src="https://github.com/user-attachments/assets/004071a1-6f19-4ffa-9dea-16d19b256cbe" />
+
+<img width="422" height="277" alt="image" src="https://github.com/user-attachments/assets/6eb375a4-6304-4762-9749-220bfbfdbe69" />
+
+Kemudian buka browser untuk melihat hasilnya.
+- Halaman Home
+
+<img width="1920" height="981" alt="image" src="https://github.com/user-attachments/assets/9181c4a6-dba0-4950-8273-e4b29f73b70a" />
+
+- Halaman Artikel
+
+<img width="1920" height="975" alt="image" src="https://github.com/user-attachments/assets/80ed6b54-cf20-45d2-9826-ec89bfe773f3" />
+
+- Halaman About
+
+<img width="1920" height="975" alt="image" src="https://github.com/user-attachments/assets/450c62ab-cde9-4c35-9469-8755686f06f1" />
+
+- Halaman Kontak
+
+<img width="1920" height="974" alt="image" src="https://github.com/user-attachments/assets/9d4346d9-d473-4013-8de7-ca0938876e65" />
+
+### 5. Jawaban Pertanyaan Tugas
+**Manfaat utama dari penggunaan View Layout**
+- **Efisiensi Kode (Reusability)**: Kita tidak perlu menulis ulang struktur HTML (Header, Navigasi, Footer) di setiap file View.
+- **Kemudahan Maintenance**: Jika ada perubahan pada tampilan menu atau footer, kita cukup mengubah satu file saja (layout/main.php), maka seluruh halaman akan otomatis terupdate.
+- **Konsistensi Tampilan**: Memastikan seluruh halaman website memiliki desain dan struktur yang seragam.
+
+**Perbedaan View cell dengan View biasa**
+- **View Biasa**: Digunakan untuk menampilkan konten utama satu halaman penuh (misal: halaman About atau Daftar Artikel) dan biasanya dipanggil langsung oleh Controller.
+- **View Cell**: Digunakan untuk menampilkan komponen UI kecil yang bersifat modular (seperti widget sidebar atau menu navigasi).
+- **Kemandirian Data**: View Cell bisa mengambil datanya sendiri (melalui class Cell) tanpa harus dikirimkan data secara manual dari Controller utama, sehingga lebih praktis digunakan berulang kali di halaman mana saja.
+
+---
+
+### Praktikum 4: 
