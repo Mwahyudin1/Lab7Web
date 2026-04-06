@@ -205,4 +205,103 @@ Kemudian buka browser untuk melihat hasilnya.
 
 ---
 
-### Praktikum 4: 
+### Praktikum 4
+### 1. Membuat Tabel User
+Lakukan pembuatan tabel melalui phpMyAdmin pada database ``` lab_ci4 ```. Tabel ini berfungsi untuk mennyimpan informasi login admin.
+
+<img width="469" height="248" alt="image" src="https://github.com/user-attachments/assets/ade176a8-c7dd-497a-80d0-43929ab40c7a" />
+
+### 2. Membuat Model User
+Model user dibuat untuk menciptakan objek yang bertugas mengelola data pada tabel ``` users ```. Tanpa model, controller tidak akan bisa mengecek apakah username, email, dan password ada di database atau tidak.
+
+Buat file baru di direktory ``` app/Models/ ``` dengan nama file ``` UserModel.php ```.
+
+<img width="805" height="342" alt="image" src="https://github.com/user-attachments/assets/55ff3ed8-cd16-4092-8ea9-fbd87866b52a" />
+
+### 3. Membuat Seeder
+Seeder berfungsi untuk memasukkan data pengguna awal ke dalam tabel users secara otomatis tanpa harus mengisi manual lewat phpMyAdmin. Dengan menggunakan seeder, password admin ``` ("admin123") ``` akan diubah menjadi kode acak (hash) menggunakan fungsi ``` password_hash ``` agar tersimpan secara aman di database.
+
+Buka terminal/CLI dan jalankan perintah ``` php spark make:seeder UserSeeder ``` untuk membuat seeder baru.
+
+<img width="759" height="165" alt="image" src="https://github.com/user-attachments/assets/4a45ee5b-e435-4aeb-94f3-89ece990a9ce" />
+
+Kemudian buka direktory ``` app/Database/Seeds/UserSeeder.php ``` lalu isi kode berikut.
+
+<img width="818" height="463" alt="image" src="https://github.com/user-attachments/assets/5e07ee97-73a8-4ba4-9dd7-f00d9e6cbef8" />
+
+Kemudian buka terminal dan jalankan perintah ``` php spark db:seed UserSeeder ```.
+
+<img width="749" height="140" alt="image" src="https://github.com/user-attachments/assets/3ff5e0f0-3135-4a96-bb90-266449cfa5d1" />
+
+Kemudian cek kembali tabel ``` users ``` pada phpMyAdmin untuk melihat apakah database berhasil di eksekusi atau tidak.
+
+<img width="1093" height="77" alt="image" src="https://github.com/user-attachments/assets/fe806b6b-13ad-48da-8102-c7d39ec37564" />
+
+Data berhasil di eksekusi dan password berhasil di has.
+
+### 4. Membuat Controller User
+Controller ini berfungsi sebagai pengatur alur masuk dan keluar pengguna. Saat user menginput data, Controller akan meminta ``` UserModel ``` untuk mencari email tersebut di database. Jika ditemukan, password akan dicocokkan. Jika sesuai, data pengguna disimpan ke dalam session agar sistem mengenali bahwa user tersebut sudah login. Jika salah, user akan dikembalikan ke halaman login dengan pesan kesalahan.
+
+Buat file baru dengan nama ``` User.php ``` di dalam direktory ``` app/Controllers/ ```.
+
+<img width="1543" height="678" alt="image" src="https://github.com/user-attachments/assets/30aa8b3f-7d79-4117-93d9-e4c62f218744" />
+
+<img width="1542" height="632" alt="image" src="https://github.com/user-attachments/assets/c90d765a-52e0-4e13-98ea-017d90bc207a" />
+
+### 5. Membuat View Login
+Halaman ini berfungsi sebagai antarmuka pengguna untuk melakukan proses autentikasi. Form ini menggunakan metode ``` post ``` untuk mengirimkan data secara aman ke Controller. Di dalamnya terdapat pengecekan *session flashdata* untuk memberikan feedback jika pengguna salah memasukan email atau password salah.
+
+Buat direktory baru bernama ``` user ``` di dalam direktory ``` app/Views/ ```, kemudia buat file baru dengan nama ``` login.php ``` pada direktory ``` app/Views/user/ ```.
+
+<img width="1325" height="666" alt="image" src="https://github.com/user-attachments/assets/9d85803d-602c-4059-a1df-ada1bbf78182" />
+
+### 6. Konfigurasi Routing Login dan Logout
+Konfigurasi ini berfungsi untuk mendaftarkan alamat URL ``` /user/login ``` dan ``` /user/logout ``` ke dalam sistem. Tanpa konfigurasi ini, browser akan menampilkan ``` Error 404 (Page Not Found) ``` karena sistem tidak tahu URL tersebut harus diarahkan ke Controller User.
+
+Buka file ``` routes.php ``` untuk melakukan update atau konfigurasi dan tambahkan kode berikut.
+
+<img width="525" height="135" alt="image" src="https://github.com/user-attachments/assets/0c0ee7f9-e4a9-4333-97d4-69b30487cee7" />
+
+Kemudian buka browser untuk melihat halaman login.
+
+<img width="1044" height="666" alt="image" src="https://github.com/user-attachments/assets/391184b3-e2c4-4f99-a992-abcc77d1d982" />
+
+### 7. Membuat Auth Filter
+Auth filter berfungsi untuk menciptakan sistem keamanan ``` (middleware) ```. Filter ini akan memeriksa apakah pengunjung sudah login atau belum. Jika belum, filter secara otomatis akan menolak akses dan mengarahkan kembali pengunjung ke halaman login, sehingga folder admin tidak bisa diakses sembarangan.
+
+Buat file dengan nama ``` Auth.php ``` pada direktory ``` app/Fillters/ ``` lalu isi dengan kode berikut.
+
+<img width="1086" height="456" alt="image" src="https://github.com/user-attachments/assets/67c745c8-c2bf-493c-a5ad-362edbfb8eda" />
+
+### 8. Aktivasi Filter
+Aktivasi filter ini dilakukan untuk menghidupkan sistem keamanan yang telah dibuat. Dengan mendaftarkan rute ``` admin/* ``` ke dalam filter ``` before ```, maka setiap kali ada permintaan akses ke halaman admin (seperti tambah, edit, atau hapus artikel), sistem akan otomatis menjalankan pengecekan login terlebih dahulu. Jika pengguna belum login, maka akan diarahkan kembali ke halaman login.
+
+Buka file ``` app/Config/Fillters.php ``` cari ``` public arry $aliases ``` lalu tambahkan kode ``` 'auth' => \App\Filters\Auth::class, ```.
+
+<img width="806" height="290" alt="image" src="https://github.com/user-attachments/assets/885b5869-7bac-4d9d-980d-788151340c46" />
+
+Masih di file yang sama cari bagian ``` public $globals ``` kemudian tambahkan kode ``` 'auth' => ['except' => ['user/login', 'user/logout', '/']], ```.
+
+<img width="1078" height="290" alt="image" src="https://github.com/user-attachments/assets/b076e282-cc42-4886-959a-964a84af679f" />
+
+### 9. Melakukan Uji Coba (Testing)
+Pengujian dilakuakn untuk mengetahui apakah sistem yang di buat sudah berjalan dengan baik atau belum. Dalam Pengujian ini dilakukan beberapa tahapan untuk pengujiannya.
+- Tahap 1: Uji Coba Fillter Keamnana
+
+Untuk melakukannya ketik manual di browser ``` localhost:8080/admin/artikel ```, jika di lempar kembali ke halaman login berarti fillter keamanan berhasil diterapkan.
+
+- Tahap 2: Uji Coba Login Gagal
+
+Masukan email dan password asal - asalan untuk melakukan uji coba login gagal.
+
+<img width="1042" height="669" alt="image" src="https://github.com/user-attachments/assets/1db443cc-3ae5-4f17-b5f6-04b804218653" />
+
+- Tahap 3: Uji Coba Login Sukses
+
+Untuk melakukan masukan email dan password dengan benar. Maka akan di arahkan ke halaman admin.
+
+<img width="1043" height="665" alt="image" src="https://github.com/user-attachments/assets/7af05a53-1ffe-4ae3-83f0-a4550de29e2a" />
+
+<img width="1919" height="971" alt="image" src="https://github.com/user-attachments/assets/97f1d6ac-5b2c-48f6-bed1-7645cdbc1450" />
+
+---
