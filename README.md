@@ -305,3 +305,11 @@ Untuk melakukan masukan email dan password dengan benar. Maka akan di arahkan ke
 <img width="1919" height="971" alt="image" src="https://github.com/user-attachments/assets/97f1d6ac-5b2c-48f6-bed1-7645cdbc1450" />
 
 ---
+
+### Praktikum 5: Pagination dan Pencarian
+### 1. Modifikasi Controller Artikel
+Melakukan pembaruan pada fungsi ``` admin_index() ``` di dalam ``` app/Controllers/Artikel.php. ``` Perubahan ini bertujuan untuk mengganti fungsi ``` findAll() ``` (yang mengambil semua data) menjadi fungsi ``` paginate() ``` untuk membatasi tampilan data sebanyak 10 baris per halaman. Selain itu, ditambahkan logika untuk menangkap variabel pencarian ``` q ``` agar pengguna dapat memfilter artikel berdasarkan judul.
+
+<img width="710" height="365" alt="image" src="https://github.com/user-attachments/assets/4b9e0de4-34ad-4bdd-bd7f-39394f3dfcce" />
+
+### 2. Modifikasi View Admin (admin_index.php)
